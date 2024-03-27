@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.CuLibraryApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.CuLibraryApp" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
@@ -11,12 +11,16 @@
         <item name="android:fontFamily">@font/manrope_regular</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="manrope_light_text_style" parent="Widget.MaterialComponents.TextView">
         <item name="android:fontFamily">@font/manrope_light</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 
@@ -24,13 +28,17 @@
         <item name="android:fontFamily">@font/manrope_medium</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 
-    <style name="avenir_bold_text_style" parent="Widget.MaterialComponents.TextView">
+    <style name="manrope_semi_bold_text_style" parent="Widget.MaterialComponents.TextView">
         <item name="android:fontFamily">@font/manrope_semi_bold</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 
@@ -38,6 +46,8 @@
         <item name="android:fontFamily">@font/manrope_bold</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 
@@ -51,7 +61,7 @@
 <!--        <item name="android:backgroundTint">@color/bg_color_grey_dark</item>-->
         <item name="android:textCursorDrawable">@null</item>
         <item name="android:background">@null</item>
-<!--        <item name="android:textColorHint">@color/text_color_hint</item>-->
+        <item name="android:textColorHint">@color/text_color_hint</item>
         <item name="android:inputType">textCapSentences</item>
     </style>
 
@@ -124,7 +134,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/_40sdp</item>
         <item name="android:textSize">@dimen/_12ssp</item>
-        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="fontFamily">@font/manrope_bold</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textAlignment">center</item>
@@ -167,4 +177,14 @@
 <!--        <item name="android:background">@drawable/button_roundcorner</item>-->
     </style>
 
+
+    <style name="CardTopCornerRadius" parent="">
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="cornerSizeTopLeft">@dimen/_55sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
 </resources>

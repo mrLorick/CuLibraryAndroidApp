@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CuLibraryApp</string>
+    <string name="welcome_to_cu_library">Welcome to CU Library</string>
+    <string name="enter_your_uid_and_password">Enter your UID and Password.</string>
+    <string name="password">Password</string>
+    <string name="uid">UID</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
 </resources>
