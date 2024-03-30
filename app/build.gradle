@@ -46,10 +46,12 @@ dependencies {
     /** Snack bar*/
     implementation("org.aviran.cookiebar2:cookiebar2:1.1.5")
 
-    //todo Dimens Dependency
+    /** Dimens Dependency */
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
 
+    /** Mp chart */
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

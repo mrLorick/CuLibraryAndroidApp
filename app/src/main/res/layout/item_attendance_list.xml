@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="@color/stroke_color"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAttendance">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubjectName"
+                style="@style/manrope_medium_textview"
+                android:text="Web Technologies"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubjectCode"
+                style="@style/manrope_medium_textview"
+                android:text="22CAH-254"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubjectName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubjectDec"
+                style="@style/manrope_regular_text_style"
+                android:text="You have passed the eligibility criteria and can \nleave 10 classes"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubjectCode" />
+
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pieAttendance"
+                style="@style/circleProgressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:progress="69"
+                app:indicatorColor="@color/red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAttendancePercentage"
+                style="@style/manrope_medium_textview"
+                android:text="83%"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/pieAttendance"
+                app:layout_constraintEnd_toEndOf="@+id/pieAttendance"
+                app:layout_constraintStart_toStartOf="@+id/pieAttendance"
+                app:layout_constraintTop_toTopOf="@+id/pieAttendance" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAttendanceCount"
+                style="@style/manrope_medium_textview"
+                android:text="27/30 days"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/pieAttendance"
+                app:layout_constraintStart_toStartOf="@+id/pieAttendance"
+                app:layout_constraintTop_toBottomOf="@+id/pieAttendance" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

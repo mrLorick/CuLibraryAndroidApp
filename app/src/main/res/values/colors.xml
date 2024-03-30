@@ -5,5 +5,8 @@
     <color name="red">#D22020</color>
     <color name="grey">#A8A3A3</color>
     <color name="text_color_hint">#828282</color>
+    <color name="bg_color">#FAFAFA</color>
+    <color name="stroke_color">#D9D9D9</color>
+    <color name="green">#0DA939</color>
 
 </resources>

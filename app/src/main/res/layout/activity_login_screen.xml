@@ -19,7 +19,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/appCompatImageView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/_50sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_50sdp"
                 android:src="@drawable/logo_cu"
@@ -89,8 +90,8 @@
                         android:drawableStart="@drawable/ic_person_red"
                         android:drawablePadding="@dimen/_10sdp"
                         android:gravity="center_vertical"
-                        android:inputType="text"
-                        tools:hint="Enter UID" />
+                        android:inputType="textCapSentences"
+                        android:hint="@string/enter_uid" />
 
                 </RelativeLayout>
 
@@ -127,23 +128,25 @@
                         android:drawablePadding="@dimen/_10sdp"
                         android:gravity="center_vertical"
                         android:inputType="text"
-                        tools:hint="Enter UID" />
+                        android:hint="@string/enter_password" />
 
                 </RelativeLayout>
 
                 <CheckBox
                     android:id="@+id/checkRememberMe"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:paddingStart="@dimen/_5sdp"
                     android:paddingEnd="0dp"
-                    android:textColor="@color/white"
                     android:text="@string/remember_me"
+                    android:textColor="@color/white"
+                    android:drawableTint="@color/white"
                     app:buttonCompat="@drawable/custom_check_box_remember_selector"
+                    app:layout_constraintEnd_toStartOf="@+id/tvForgotPassword"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rlPassword" />
-
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvForgotPassword"

@@ -20,6 +20,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -27,7 +28,9 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import com.lorick.culibrary.R
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -162,16 +165,16 @@ fun Activity.setStatusBarHideBoth(){
 }
 
 fun Activity.overrideImageStatusBar(context: Context){
-    window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-            )
+    window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
     window.statusBarColor = Color.TRANSPARENT
 }
 
-fun Activity.overrideColorStatusBar(color: Int){
-    window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-    window.statusBarColor = color
-}
 
+fun Activity.overrideColorStatusBar(color: Int = R.color.white) {
+    val window: Window = window
+    window.statusBarColor = ContextCompat
+        .getColor(this, color)
+}
 
 @SuppressLint("SimpleDateFormat")
 fun View.showTimePicker(callback: (String) -> Unit) {
