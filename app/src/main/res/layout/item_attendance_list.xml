@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -24,17 +25,21 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvSubjectName"
                 style="@style/manrope_medium_textview"
-                android:text="Web Technologies"
-                android:textColor="@color/black"
                 android:layout_marginTop="@dimen/_10sdp"
+                tools:text="Web Technologies"
+                android:layout_width="0dp"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_11ssp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintEnd_toStartOf="@+id/pieAttendance"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvSubjectCode"
                 style="@style/manrope_medium_textview"
-                android:text="22CAH-254"
+                tools:text="22CAH-254"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_11ssp"
@@ -71,7 +76,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvAttendancePercentage"
                 style="@style/manrope_medium_textview"
-                android:text="83%"
+                tools:text="83%"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_6ssp"
                 app:layout_constraintBottom_toBottomOf="@+id/pieAttendance"
@@ -82,7 +87,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvAttendanceCount"
                 style="@style/manrope_medium_textview"
-                android:text="27/30 days"
+                tools:text="27/30 days"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_8ssp"
                 app:layout_constraintBottom_toBottomOf="parent"

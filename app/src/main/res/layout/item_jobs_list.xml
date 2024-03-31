@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="@color/stroke_color"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAttendance">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvJobsTitle"
+                style="@style/manrope_semi_bold_text_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Product Designer" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCompanyName"
+                style="@style/manrope_medium_textview"
+                tools:text="Invansys Technologies"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJobsTitle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvJobType"
+                style="@style/manrope_regular_text_style"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Job Type- Full Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompanyName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvJobExp"
+                style="@style/manrope_regular_text_style"
+                android:text="Experience- 6months"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJobType" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCompanyAddress"
+                style="@style/manrope_regular_text_style"
+                android:text="Delhi, India (On-site)"
+                android:textColor="@color/grey_light"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJobExp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHrNumber"
+                style="@style/manrope_regular_text_style"
+                android:text="423843232493"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@drawable/ic_call_black"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toTopOf="@+id/tvHrEmail"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHrEmail"
+                style="@style/manrope_regular_text_style"
+                android:text="Shreya78@gmail.com"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@drawable/ic_mail_black"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -8,5 +8,6 @@
     <color name="bg_color">#FAFAFA</color>
     <color name="stroke_color">#D9D9D9</color>
     <color name="green">#0DA939</color>
+    <color name="grey_light">#766C6C</color>
 
 </resources>
