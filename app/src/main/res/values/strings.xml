@@ -41,5 +41,8 @@
     <string name="experience">"Experience- "</string>
     <string name="address_na">Address- NA</string>
     <string name="home_tab">Home</string>
+    <string name="academics">Academics</string>
+    <string name="personal">Personal</string>
+    <string name="e_learning">E-Learning</string>
 
 </resources>
