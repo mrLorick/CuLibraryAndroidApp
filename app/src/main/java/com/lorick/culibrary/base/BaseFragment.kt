@@ -26,8 +26,11 @@ abstract class BaseFragment<VB : ViewBinding>(
 
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    abstract fun initView()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initView()
     }
 
     override fun onStop() {

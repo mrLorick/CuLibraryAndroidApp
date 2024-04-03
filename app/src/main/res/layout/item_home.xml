@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -11,18 +12,17 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/_5sdp">
 
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvImg"
             style="@style/MaterialCardStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp"
-            android:elevation="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:elevation="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             app:cardCornerRadius="@dimen/_10sdp"
-            app:cardElevation="@dimen/_5sdp"
+            app:cardElevation="@dimen/_2sdp"
             app:layout_constraintEnd_toEndOf="parent"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -34,9 +34,10 @@
                 android:padding="@dimen/_20sdp">
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_attendance"
+                    tools:src="@drawable/ic_attendance"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -46,13 +47,14 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
             android:gravity="center_horizontal"
             style="@style/manrope_semi_bold_text_style"
             android:textSize="@dimen/_10ssp"
-            android:text="Class\nTimetable"
+            tools:text="Class\nTimetable"
             app:layout_constraintEnd_toEndOf="@id/cvImg"
             app:layout_constraintStart_toStartOf="@id/cvImg"
             app:layout_constraintTop_toBottomOf="@id/cvImg" />

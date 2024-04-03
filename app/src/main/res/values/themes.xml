@@ -217,4 +217,8 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>>
     </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.FloatingActionButton" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

@@ -8,6 +8,7 @@ import com.lorick.culibrary.databinding.ActivityLoginScreenBinding
 import com.lorick.culibrary.genrics.Resource
 import com.lorick.culibrary.genrics.RunInScope
 import com.lorick.culibrary.sharedPreference.SharedPrefs
+import com.lorick.culibrary.ui.activity.dashboard.DashboardScreenActivity
 import com.lorick.culibrary.ui.activity.jobs.JobsListScreenActivity
 import com.lorick.culibrary.utils.MyProgressBar
 import com.lorick.culibrary.utils.constant.AppConstants
@@ -62,7 +63,7 @@ class LoginScreenActivity : BaseActivity<ActivityLoginScreenBinding>() {
                         if (data?.isSuccess() == true) {
                             sharedPrefs.save(AppConstants.USER_SESSION_ID,data.session_id)
                             sharedPrefs.saveUserLogin(true)
-                            launchActivity<JobsListScreenActivity> {  }
+                            launchActivity<DashboardScreenActivity> {  }
                             finishActivity()
                         } else {
                             showErrorSnack(activity, data?.message ?: "")
