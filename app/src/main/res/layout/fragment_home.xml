@@ -28,140 +28,149 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-            <LinearLayout
-                android:id="@+id/llProfile"
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/red"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_profile" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tvStudentName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/_5sdp"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
-                    android:text="Akshita Mehta" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tvSemester"
-                    style="@style/manrope_medium_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_6sdp"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
-                    android:text="UID-22BCA1092, Sem 4" />
-
-            </LinearLayout>
-
-            <androidx.core.widget.NestedScrollView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/llProfile">
-
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:paddingHorizontal="@dimen/_10sdp"
-                    android:paddingVertical="@dimen/_10sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/llProfile">
+                    android:layout_height="match_parent">
 
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tvAcademics"
-                        style="@style/manrope_bold_text_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:textColor="@color/black"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:textSize="@dimen/_13sdp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:text="@string/academics" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvAcademics"
+                    <LinearLayout
+                        android:id="@+id/llProfile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:background="@color/red"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvAcademics"
-                        app:spanCount="4"
-                        tools:itemCount="8"
-                        tools:listitem="@layout/item_home" />
+                        app:layout_constraintTop_toTopOf="parent">
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tvELearning"
-                        style="@style/manrope_bold_text_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:textColor="@color/black"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:textSize="@dimen/_13sdp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/rvAcademics"
-                        android:text="@string/e_learning" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/img_profile" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvELearning"
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvStudentName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:text="Akshita Mehta"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvSemester"
+                            style="@style/manrope_medium_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:text="UID-22BCA1092, Sem 4"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvELearning"
-                        app:spanCount="4"
-                        tools:itemCount="8"
-                        tools:listitem="@layout/item_home" />
+                        app:layout_constraintTop_toBottomOf="@+id/llProfile">
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tvPersonal"
-                        style="@style/manrope_bold_text_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:textColor="@color/black"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:textSize="@dimen/_13sdp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/rvELearning"
-                        android:text="@string/personal" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvPersonal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvPersonal"
-                        app:spanCount="4"
-                        tools:itemCount="8"
-                        tools:listitem="@layout/item_home" />
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAcademics"
+                            style="@style/manrope_bold_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:text="@string/academics"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvAcademics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvAcademics"
+                            app:spanCount="4"
+                            android:nestedScrollingEnabled="false"
+                            tools:itemCount="8"
+                            tools:listitem="@layout/item_home" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvELearning"
+                            style="@style/manrope_bold_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/e_learning"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rvAcademics" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvELearning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvELearning"
+                            app:spanCount="4"
+                            android:nestedScrollingEnabled="false"
+                            tools:itemCount="8"
+                            tools:listitem="@layout/item_home" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvPersonal"
+                            style="@style/manrope_bold_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/personal"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rvELearning" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPersonal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvPersonal"
+                            app:spanCount="4"
+                            android:nestedScrollingEnabled="false"
+                            tools:itemCount="8"
+                            tools:listitem="@layout/item_home" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

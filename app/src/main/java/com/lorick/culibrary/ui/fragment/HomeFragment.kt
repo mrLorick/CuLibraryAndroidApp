@@ -108,9 +108,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding :: in
 
     private fun getAcademicList() :ArrayList<DashboardModel>{
         val list = ArrayList<DashboardModel>()
-        list.add(DashboardModel("Class\nTimetable",R.drawable.ic_class_timetable))
+        list.add(DashboardModel("Class\nTimetable",R.drawable.ic_working_schedule))
         list.add(DashboardModel("Syllabus\nStatus",R.drawable.ic_syllabus))
-        list.add(DashboardModel("Attendance",R.drawable.ic_attendance))
+        list.add(DashboardModel("Attendance",R.drawable.ic_attendance_list))
         list.add(DashboardModel("Date sheet",R.drawable.ic_datesheet))
         list.add(DashboardModel("Notice\nBoard",R.drawable.ic_notice_board))
         list.add(DashboardModel("DSW",R.drawable.ic_dsw))
